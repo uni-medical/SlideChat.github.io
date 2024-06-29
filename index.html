@@ -3502,16 +3502,29 @@
 </footer>
 
 <script>
-  function changeButtonText() {
-    var button = document.getElementById('toggleButton');
-    if (button.innerHTML.includes("Clinical VQA Tasks Results")) {
-      button.innerHTML = "<b style='font-size: larger;'>Departments Results</b> (Click to Switch)";
-    } else if(button.innerHTML.includes("Departments Results")){
-      button.innerHTML = "<b style='font-size: larger;'>Perceptual Granularities Results</b> (Click to Switch)";
-    } else {
-      button.innerHTML = "<b style='font-size: larger;'>Clinical VQA Tasks Results</b> (Click to Switch)";
-    }
+function changeButtonText() {
+  var button = document.getElementById('toggleButton');
+  var table1 = document.getElementById('table1');
+  var table2 = document.getElementById('table2');
+  var table3 = document.getElementById('table3');
+
+  if (button.innerHTML.includes("Clinical VQA Tasks Results")) {
+    button.innerHTML = "<b style='font-size: larger;'>Departments Results</b> (Click to Switch)";
+    table1.classList.add('hidden');
+    table2.classList.remove('hidden');
+    table3.classList.add('hidden');
+  } else if (button.innerHTML.includes("Departments Results")) {
+    button.innerHTML = "<b style='font-size: larger;'>Perceptual Granularities Results</b> (Click to Switch)";
+    table1.classList.add('hidden');
+    table2.classList.add('hidden');
+    table3.classList.remove('hidden');
+  } else {
+    button.innerHTML = "<b style='font-size: larger;'>Clinical VQA Tasks Results</b> (Click to Switch)";
+    table1.classList.remove('hidden');
+    table2.classList.add('hidden');
+    table3.classList.add('hidden');
   }
+}
   document.addEventListener('DOMContentLoaded', function() {
     var tables = document.querySelectorAll('table');
 
