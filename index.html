@@ -345,18 +345,13 @@
             </p>
           </div>
 
-          <!-- <button id="toggleButton" onclick="changeButtonText()"><b style='font-size: larger;'>Validation Set Leaderboard</b> (Click to Switch)</button> -->
-          <button id="toggleButton" onclick="changeButtonText()">
-            <b style="font-size: larger;">Perception Result</b> (Click to Switch)
-          </button>
+          <button id="toggleButton" onclick="changeButtonText()"><b style='font-size: larger;'>Depratments Result</b> (Click to Switch)</button>
           <!-- <div class="model-labels-container">
             <span class="leaderboard-label" style="background-color: rgba(255, 208, 80, 0.15);">Human Expert</span>
             <span class="leaderboard-label" style="background-color: rgba(249, 242, 248, 1);">Open-Source</span>
             <span class="leaderboard-label" style="background-color: rgba(117, 209, 215, 0.1);">Proprietary</span>
           </div> -->
           <!-- Validation Set Leaderboard -->
-          <div id="table1-container">
-          <div id="table1-label">VLM task table</div>
           <table id="table1" class="js-sort-table">
             <tr>
               <td class="js-sort-string"><strong>Model name</strong></td>
@@ -1614,9 +1609,6 @@
               <td><u>40.57</u></td>
             </tr>
           </table>
-        </div>
-        <div id="table2-container" class="hidden">
-        <div id="table2-label">Department table</div>
           <table id="table2" class="js-sort-table hidden">
             <tr>
               <td class="js-sort-string"><strong>Model name</strong></td>
@@ -2876,9 +2868,6 @@
               <td><u>40.66</u></td>
             </tr>
           </table>
-        </div>
-        <div id="table3-container" class="hidden">
-        <div id="table3-label">Perception table</div>
           <table id="table3" class="js-sort-table">
             <tr>
               <td class="js-sort-string"><strong>Model name</strong></td>
@@ -3462,7 +3451,6 @@
               <td>50.90</td>
             </tr>
           </table>
-        </div>
             <p class="test-desc hidden"> Overall results of different models on the MMMU test set. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
         </div>
       </div>
@@ -3514,29 +3502,16 @@
 </footer>
 
 <script>
-function changeButtonText() {
-  var button = document.getElementById('toggleButton');
-  var table1Container = document.getElementById('table1-container');
-  var table2Container = document.getElementById('table2-container');
-  var table3Container = document.getElementById('table3-container');
-
-  if (button.innerHTML.includes("Clinical VQA Tasks Result")) {
-    button.innerHTML = "<b style='font-size: larger;'>Departments Result</b> (Click to Switch)";
-    table1Container.classList.add('hidden');
-    table2Container.classList.remove('hidden');
-    table3Container.classList.add('hidden');
-  } else if (button.innerHTML.includes("Departments Result")) {
-    button.innerHTML = "<b style='font-size: larger;'>Perception Result</b> (Click to Switch)";
-    table1Container.classList.add('hidden');
-    table2Container.classList.add('hidden');
-    table3Container.classList.remove('hidden');
-  } else {
-    button.innerHTML = "<b style='font-size: larger;'>Clinical VQA Tasks Result</b> (Click to Switch)";
-    table1Container.classList.remove('hidden');
-    table2Container.classList.add('hidden');
-    table3Container.classList.add('hidden');
+  function changeButtonText() {
+    var button = document.getElementById('toggleButton');
+    if (button.innerHTML.includes("Clinical VQA Tasks Results")) {
+      button.innerHTML = "<b style='font-size: larger;'>Departments Results</b> (Click to Switch)";
+    } else if(button.innerHTML.includes("Departments Results")){
+      button.innerHTML = "<b style='font-size: larger;'>Perceptual Granularities. Results</b> (Click to Switch)";
+    } else {
+      button.innerHTML = "<b style='font-size: larger;'>Clinical VQA Tasks Results</b> (Click to Switch)";
+    }
   }
-}
   document.addEventListener('DOMContentLoaded', function() {
     var tables = document.querySelectorAll('table');
 
@@ -3561,19 +3536,21 @@ function changeButtonText() {
     });
 });
 
-  // function toggleTables () {
-  //     var table1 = document.getElementById('table1');
-  //     var table2 = document.getElementById('table2');
-  //     table1.classList.toggle('hidden');
-  //     table2.classList.toggle('hidden');
+  function toggleTables () {
+      var table1 = document.getElementById('table1');
+      var table2 = document.getElementById('table2');
+      var table3 = document.getElementById('table3');
+      table1.classList.toggle('hidden');
+      table2.classList.toggle('hidden');
+      table3.classList.toggle('hidden');
       
-  //     var desc1 = document.querySelector('p.validation-desc');
-  //     var desc2 = document.querySelector('p.test-desc');
-  //     desc1.classList.toggle('hidden');
-  //     desc2.classList.toggle('hidden');
-  // }
+      var desc1 = document.querySelector('p.validation-desc');
+      var desc2 = document.querySelector('p.test-desc');
+      desc1.classList.toggle('hidden');
+      desc2.classList.toggle('hidden');
+  }
 
-  // document.getElementById('toggleButton').addEventListener('click', toggleTables);
+  document.getElementById('toggleButton').addEventListener('click', toggleTables);
 
   const canvas = document.getElementById('difficulty_level_chart');
   canvas.style.width = '500px';
