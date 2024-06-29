@@ -3520,18 +3520,18 @@ function changeButtonText() {
   var table2Container = document.getElementById('table2-container');
   var table3Container = document.getElementById('table3-container');
 
-  if (button.innerHTML.includes("Validation Set Leaderboard")) {
-    button.innerHTML = "<b style='font-size: larger;'>Test Set Leaderboard</b> (Click to Switch)";
+  if (button.innerHTML.includes("Clinical VQA Tasks Result")) {
+    button.innerHTML = "<b style='font-size: larger;'>Departments Result</b> (Click to Switch)";
     table1Container.classList.add('hidden');
     table2Container.classList.remove('hidden');
     table3Container.classList.add('hidden');
-  } else if (button.innerHTML.includes("Test Set Leaderboard")) {
-    button.innerHTML = "<b style='font-size: larger;'>Perception Set Leaderboard</b> (Click to Switch)";
+  } else if (button.innerHTML.includes("Departments Result")) {
+    button.innerHTML = "<b style='font-size: larger;'>Perception Result</b> (Click to Switch)";
     table1Container.classList.add('hidden');
     table2Container.classList.add('hidden');
     table3Container.classList.remove('hidden');
   } else {
-    button.innerHTML = "<b style='font-size: larger;'>Validation Set Leaderboard</b> (Click to Switch)";
+    button.innerHTML = "<b style='font-size: larger;'>Clinical VQA Tasks Result</b> (Click to Switch)";
     table1Container.classList.remove('hidden');
     table2Container.classList.add('hidden');
     table3Container.classList.add('hidden');
@@ -3561,17 +3561,17 @@ function changeButtonText() {
     });
 });
 
-  function toggleTables () {
-      var table1 = document.getElementById('table1');
-      var table2 = document.getElementById('table2');
-      table1.classList.toggle('hidden');
-      table2.classList.toggle('hidden');
+  // function toggleTables () {
+  //     var table1 = document.getElementById('table1');
+  //     var table2 = document.getElementById('table2');
+  //     table1.classList.toggle('hidden');
+  //     table2.classList.toggle('hidden');
       
-      var desc1 = document.querySelector('p.validation-desc');
-      var desc2 = document.querySelector('p.test-desc');
-      desc1.classList.toggle('hidden');
-      desc2.classList.toggle('hidden');
-  }
+  //     var desc1 = document.querySelector('p.validation-desc');
+  //     var desc2 = document.querySelector('p.test-desc');
+  //     desc1.classList.toggle('hidden');
+  //     desc2.classList.toggle('hidden');
+  // }
 
   document.getElementById('toggleButton').addEventListener('click', toggleTables);
 
