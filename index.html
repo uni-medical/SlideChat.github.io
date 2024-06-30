@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>GMAI-MMBench</title>
+  <link rel="icon" type="image/x-icon" href="static/images/mmbench_icon.jpg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -195,7 +195,8 @@
   <div class="container is-max-desktop">
         <div class="content has-text-centered">
           <img src="static/images/cover.jpg" alt="geometric reasoning" width="100%"/>
-          <p>  Overview of the GMAI-MMbench. GMAI-MMbench focuses on medical image understanding and reasoning in real-world clinical scenarios with three key features: (1) Comprehensive medical knowledge: It consists of 285 diverse clinical-related datasets from worldwide sources, covering 38 modalities. (2) Well-organized data structure: It features 19 clinical VQA tasks across 18 clinical departments, meticulously categorized into a lexical tree. (3) Multi-perceptual granularity: Interactive methods span from image to region level, offering varying degrees of perceptual details.
+          <p>  
+            Overview of the GMAI-MMBench. The benchmark is meticulously designed for testing LVLMs’ abilities in real-world clinical scenarios with three key features: (1) Comprehensive medical knowledge: It consists of 285 diverse clinical-related datasets from worldwide sources, covering 38 modalities. (2) Well-categorized data structure: It features 19 clinical VQA tasks and 18 clinical departments, meticulously organized into a lexical tree. (3) Multi-perceptual granularity: Interactive methods span from image to region level, offering varying degrees of perceptual details.
           </div>
     </div>
   </div>
@@ -215,8 +216,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large Vision-Language Models (LVLMs) are capable of handling diverse data types such as imaging, text, and physiological signals, and can be applied in various fields. In the medical field, LVLMs have a high potential to offer substantial assistance for diagnosis and treatment. Before that, it is crucial to develop benchmarks to evaluate LVLMs' effectiveness in various medical applications. Current benchmarks are often built upon academic literature, mainly focusing on a single domain, and lacking varying perceptual granularities. Thus, they face specific challenges, including limited clinical relevance, incomplete evaluations, and insufficient guidance for interactive LVLMs. To address these limitations, we developed GMAI-MMbench, the most comprehensive and fine-grained GMAI benchmark to date. It is constructed from 285 datasets across 38 medical image modalities, 19 clinical-related tasks, and 18 departments in a Visual Question Answering (VQA) format. Additionally, we implemented a lexical tree structure that allows users to customize evaluation tasks, accommodating various assessment needs and substantially supporting medical AI research and applications. We evaluated 50 LVLMs, and the results show that even the advanced GPT-4o only achieves an accuracy of 52\%, indicating significant room for improvement. Moreover, we identified 5 main insufficiencies to be addressed in the next-generation LVLMs. Addressing them can advance the development of cutting-edge LVLMs for medical applications. We believe GMAI-MMbench will stimulate the community to build the next generation of LVLMs toward GMAI.
-          </p>
+            Large Vision-Language Models (LVLMs) are capable of handling diverse data types such as imaging, text, and physiological signals, and can be applied in various fields. In the medical field, LVLMs have a high potential to offer substantial assistance for diagnosis and treatment. Before that, it is crucial to develop benchmarks to evaluate LVLMs’ effectiveness in various medical applications. Current benchmarks are often built upon specific academic literature, mainly focusing on a single domain, and lacking varying perceptual granularities. Thus, they face specific challenges, including limited clinical relevance, incomplete evaluations, and insufficient guidance for interactive LVLMs. To address these limitations,we developed the GMAI-MMBench, the most comprehensive general medical AI benchmark with well-categorized data structure and multi-perceptual granularity to date. It is constructed from 285 datasets across 38 medical image modalities, 19 clinical-related tasks, 18 departments, and 4 perceptual granularities in a Visual Question Answering (VQA) format. Additionally, we implemented a lexical tree structure that allows users to customize evaluation tasks, accommodating various assessment needs and substantially supporting medical AI research and applications. We evaluated 50 LVLMs, and the results show that even the advanced GPT-4o only achieves an accuracy of 52%, indicating significant room for improvement. Moreover, we identified five key insufficiencies in current cutting-edge LVLMs that need to be addressed to advance the development of better medical applications. We believe GMAI-MMBench will stimulate the community to build the next generation of LVLMs toward GMAI.
+            </p>
         </div>
       </div>
     </div>
@@ -241,14 +242,43 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            We propose GMAI-MMbench, an innovative benchmark meticulously designed for the medical field, capable of providing comprehensive evaluations of LVLMs across various aspects of healthcare. Our team collected 285 datasets from public sources and hospitals over one year, covering medical imaging tasks of detection, classification, and segmentation, to form the data fuel for establishing such a benchmark. The detailed datasets are listed in the supplementary. Based on the data foundation, we design a reliable pipeline to generate question-answering pairs and organize them across different aspects with manual validation. Finally, we carefully select approximately 26K questions with varying levels of perceptual granularity from the filtered cases to construct the final GMAI-MMbench.</p>
-          <img src="static/images/workflow.png" alt="algebraic reasoning" class="center">
-          <br>
-          <p>
-            Overall illustration of GMAI-MMbench. It can be divided into three core steps: 1) Data curation and preprocessing: We standardize both images and labels after curating 285 datasets. 2) Label categorization and lexical tree construction: We categorize all labels into 19 clinical VQA tasks and 18 clinical departments, then export a lexical tree for easily customized evaluation. 3) QA generation and selection: During the generation process, each question must include information about image modality and corresponding annotation granularity. The final benchmark is obtained through additional expert validation and manual selection.
+            We propose GMAI-MMBench, an innovative benchmark meticulously designed for the medical field, capable of providing comprehensive evaluations of LVLMs across various aspects of healthcare. We collect 285 datasets from public sources and hospitals, covering medical imaging tasks of detection, classification, and segmentation, to form the data fuel for establishing such a benchmark. The detailed datasets are listed in the supplementary. Based on the data foundation, we design a reliable pipeline to generate question-answering pairs and organize them from different perspectives with manual validation. Finally, we carefully select approximately 26K questions with varying levels of perceptual granularity from the filtered cases to construct the final GMAI-MMBench.
+           <img src="static/images/Figure2.jpg" alt="algebraic reasoning" class="center">
           </p>
         </div>
     </div>
+    </div>
+
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3">Statistics</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Statistics1.jpg" alt="algebraic reasoning" width="95%"/>
+              <p> The three pie charts illustrate the distribution of different clinical VQA tasks, departments, and perceptual granularities. The left pie chart (A) shows the distribution of clinical VQA tasks, with Disease Diagnosis (DD) being the most prevalent at 18.6%, followed by Surgical Instrument Recognition (SIR) at 9.5%, Surgical Workflow Recognition (SWR) at 8.6%, and Anatomical Structure Recognition (ASR) at 8.4%. The middle pie chart (B) depicts the distribution of cases across various departments, where Pulmonary Medicine (PM) has the highest proportion at 16.0%, followed by Hematology (H) at 10.3%, General Surgery (GS) at 10.0%, and Laboratory Medicine and Pathology (LMP) at 11.1%. The right pie chart (C) represents the distribution of perceptual granularities, with Image Level accounting for the largest share at 57.2%, followed by Mask Level at 17.1%, and Contour Level at 11.6%. </p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Statistics2.jpg" alt="arithmetic reasoning" width="40%"/>
+              <p> Statistics of the clinical VQA tasks and its sub-task abbreviations mentioned in the paper with their corresponding full names.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Statistics3.jpg" alt="arithmetic reasoning" width="80%"/>
+              <p> Statistics of the departments and its sub-task abbreviations mentioned in the paper with their corresponding full names.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/Statistics4.jpg" alt="arithmetic reasoning" width="80%"/>
+              <p> Statistics of the perceptual granularities. ∗ and # denote the case for single choice and multiple choice, respectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="columns is-centered has-text-centered">
@@ -260,58 +290,11 @@
             In this work, to make the GMAI-MMBench more intuitive and user-friendly, we have systematized our labels and structured the entire dataset into a lexical tree. Users can freely select the test contents based on this lexical tree. We believe that this customizable benchmark will effectively guide the improvement of models in specific areas.
         </p>
         <div class="content has-text-centered">
-          <img src="static/images/tree.png" alt="algebraic reasoning" class="center">
-          <p> Sampled MMMU examples from each discipline. The questions and images need expert-level knowledge to understand and reason.</p>
+          <img src="static/images/Lexical Tree_2.jpg" alt="algebraic reasoning" class="center">
+          <p> An example of how to use the Lexical Tree for customizing evaluations. The process involves selecting the department (ophthalmology), choosing the modality (fundus photography), filtering questions using relevant keywords, and evaluating different models based on their accuracy in answering the filtered questions. </p>
         </div>
         </div>
     </div>
-    </div>
-
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Comparisons with Existing Benchmarks</h2>
-        <div class="content has-text-justified">
-          <p>
-            To further distinguish the difference between <i>dataset</i> and other existing ones, we elaborate the benchmark details in Figure. 
-            From the <i>breadth</i> perspective, the prior benchmarks are heavily focused on daily knowledge and common sense. 
-            The covered image format is also limited. Our benchmark aims to cover college-level knowledge with 30 image formats including diagrams, 
-            tables, charts, chemical structures, photos, paintings, geometric shapes, music sheets, medical images, etc. 
-            In the <i>depth</i> aspect, the previous benchmarks normally require commonsense knowledge or simple physical or temporal reasoning. 
-            In contrast, our benchmark requires deliberate reasoning with college-level subject knowledge.
-        </p>
-        <div class="content has-text-centered">
-          <img src="static/images/compare.Jpeg" alt="algebraic reasoning" class="center">
-          <p> Sampled MMMU examples from each discipline. The questions and images need expert-level knowledge to understand and reason.</p>
-        </div>
-        </div>
-    </div>
-    </div>
-
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3">Statistics</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/mmmu_subject_distribution.Jpeg" alt="algebraic reasoning" width="95%"/>
-              <p> Sampled MMMU examples from each discipline. The questions and images need expert-level knowledge to understand and reason.</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/statistics.png" alt="arithmetic reasoning" width="40%"/>
-              <p> Key statistics of the MMMU benchmark</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/image_type_count.png" alt="arithmetic reasoning" width="80%"/>
-              <p> Distribution of image types in the MMMU dataset</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -326,24 +309,11 @@
 <section class="section">
   <div class="container">
 
-
-
 <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
         <div class="content">
-          <div class="content has-text-justified">
-            <p>
-              We evaluate various models including LLMs and LMMs.
-              In each type, we consider both closed- and open-source models.
-              Our evaluation is conducted under a zero-shot setting to assess the capability of models to generate accurate answers without fine-tuning or few-shot demonstrations on our benchmark.
-              For all models, we use the default prompt provided by each model for multi-choice or open QA, if available.
-              If models do not provide prompts for task types in MMMU, we conduct prompt engineering on the validation set and use the most effective prompt for the later zero-shot experiment.
-
-            </p>
-          </div>
-
           <button id="toggleButton" onclick="changeButtonText()"><b style='font-size: larger;'>Clinical VQA Tasks Results</b> (Click to Switch)</button>
           <!-- <div class="model-labels-container">
             <span class="leaderboard-label" style="background-color: rgba(255, 208, 80, 0.15);">Human Expert</span>
@@ -3507,26 +3477,490 @@
     </tr>
   </tbody>
 </table>
-            <p class="test-desc hidden"> Overall results of different models on the MMMU test set. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
+      </div>
+      </div>
+    </div>
+
+<!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
+<div class="columns is-centered m-6">
+  <div class="column is-full has-text-centered content">
+    <h2 class="title is-3">Analysis</h2>
+    <img src="static/images/ErrorClassification.jpg" alt="error distribution" width="25%">
+    <div class="content has-text-justified">
+      <p>
+        In our analysis of cases, we categorize the process from input to output into five major classes: Question Misunderstanding, Perceptual Error, Knowledge Deficiency, Irrelevant Responses, and Refusal to Answer. We posit that a model, upon receiving visual and textual information, undergoes two distinct stages: perception and inference. Initially, the text and visual data are input into the model. If the model comprehends the semantic content of the text, it proceeds to scrutinize the image based on the textual information. Failure to grasp the text’s meaning constitutes a Question Misunderstanding. Subsequently, the model perceives the content and details of the image. An inability to accurately perceive the image’s content is classified as a Perceptual Error. Within the domain of Perceptual Error, if the model overlooks critical details, this error is termed Perceptual Error - Detail Missing (PE - Detail Missing). Conversely, if the model fails to recognize key information despite not overlooking details, it is categorized as Perceptual Error - Misinterpretation (PE - Misinterpretation).
+      </p>
+      <p>
+        If the model correctly perceives the image, it advances to the inference stage. Errors occurring during inference are classified as Knowledge Deficiency. If the model derives an incorrect or outdated response based on accurate perception, this constitutes Lack of Knowledge. If the model erroneously deems the information provided by the image insufficient to formulate a correct response, despite adequate information being available, this error is termed Unable to Determine. Additionally, if the model produces responses devoid of logical coherence, rendering the response logic unanalyzable, such errors fall under Irrelevant Responses. Another scenario arises when the model refrains from answering due to adherence to information security protocols, precluding analysis of its response logic. This error is designated as Refusal to Answer.
+      </p>
+    </div>
+    <div class="content has-text-centered">
+      <img src="static/images/ErrorClassification.jpg" alt="error distribution" width="25%">
+      <p>
+        The flowchart of error classification process for evaluating model performance from input to output, encompassing stages from question understanding to knowledge analysis
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
+
+<div class="columns is-centered m-6">
+  <div class="column is-full has-text-centered content">
+    <h2 class="title is-3" id="examples">Error Examples</h2>
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/1.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/2.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/3.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/4.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/5.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/6.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/7.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/8.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/9.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/10.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/11.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/12.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/13.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <!-- <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/14.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div> -->
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/15.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/16.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/17.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/18.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/19.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/20.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/21.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/22.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/23.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/24.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/25.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/26.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/27.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/28.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/29.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/30.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/31.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/32.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/33.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/34.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/35.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/36.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/37.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/38.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/39.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/40.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/41.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/42.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/43.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/44.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/45.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/46.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/47.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/48.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/49.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/error/50.png" alt="grade-lv" width="60%"/>
         </div>
       </div>
     </div>
+  </div>
+</div>
+<!-------------------------------------------------------------------- Correct Example -------------------------------------------------------------------->
 
-
-
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<div class="columns is-centered m-6">
+  <div class="column is-full has-text-centered content">
+    <h2 class="title is-3">Correct Examples</h2>
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/1.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/2.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/3.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/4.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/5.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/6.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/7.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/8.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/9.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/10.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/11.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/12.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <!-- <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/13.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div> -->
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/14.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/15.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/16.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/17.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/18.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/19.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/20.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/21.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/22.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/23.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/24.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/25.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/26.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/27.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/28.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/29.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/30.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/31.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/32.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/33.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/34.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/35.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/36.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/37.png" alt="grade-lv" width="60%"/>
+        </div>
+      </div>
+      <div class="box m-5">
+        <div class="content has-text-centered">
+          <img src="static/images/correct/38.png" alt="grade-lv" width="60%"/>
+        </div>
       </div>
     </div>
-  </section> -->
-<!--End paper poster -->
+  </div>
+</div>
 
 
 <!--BibTex citation -->
@@ -3546,8 +3980,8 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
