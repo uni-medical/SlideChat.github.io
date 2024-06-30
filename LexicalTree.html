@@ -521,16 +521,33 @@
         </div>
     </div>
     <script>
+        // function toggleCategory(id) {
+        //     var element = document.getElementById(id);
+        //     var checkbox = document.getElementById(id + '-check');
+        //     if (checkbox.checked) {
+        //         element.style.display = "block";
+        //     } else {
+        //         element.style.display = "none";
+        //     }
+        // }
         function toggleCategory(id) {
             var element = document.getElementById(id);
             var checkbox = document.getElementById(id + '-check');
+            
             if (checkbox.checked) {
                 element.style.display = "block";
             } else {
                 element.style.display = "none";
             }
-        }
-
+    
+            // Ensure the other categories keep their positions
+            var allCategories = document.getElementsByClassName('category-container');
+            for (var i = 0; i < allCategories.length; i++) {
+                if (allCategories[i].id !== id) {
+                    allCategories[i].style.visibility = "visible";
+                }
+            }
+}
         function toggleVisibility(id) {
             var element = document.getElementById(id);
             if (element.style.display === "none") {
