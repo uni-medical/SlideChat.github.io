@@ -315,7 +315,7 @@
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
-        <div class="content" style="width: 100%">
+        <div class="content">
           <button id="toggleButton" onclick="changeButtonText()"><b style='font-size: larger;'>Clinical VQA Tasks Results</b> (Click to Switch)</button>
           <!-- <div class="model-labels-container">
             <span class="leaderboard-label" style="background-color: rgba(255, 208, 80, 0.15);">Human Expert</span>
@@ -323,30 +323,31 @@
             <span class="leaderboard-label" style="background-color: rgba(117, 209, 215, 0.1);">Proprietary</span>
           </div> -->
           <!-- Validation Set Leaderboard -->
-          <table id="table1" class="js-sort-table">
+          <table id="table1" class="js-sort-table" style="width: 100%">
             <thead>
               <tr>
-                <th><strong>Model name</strong></th>
-                <th><strong>Overall (val)</strong></th>
-                <th><strong>Overall (test)</strong></th>
-                <th><strong>AR</strong></th>
-                <th><strong>BVR</strong></th>
-                <th><strong>B</strong></th>
-                <th><strong>CR</strong></th>
-                <th><strong>C</strong></th>
-                <th><strong>DD</strong></th>
-                <th><strong>IQG</strong></th>
-                <th><strong>MR</strong></th>
-                <th><strong>M</strong></th>
-                <th><strong>NT</strong></th>
-                <th><strong>OR-A</strong></th>
-                <th><strong>OR-HN</strong></th>
-                <th><strong>OR-P</strong></th>
-                <th><strong>OR-T</strong></th>
-                <th><strong>SG</strong></th>
-                <th><strong>SAR</strong></th>
-                <th><strong>SIR</strong></th>
-                <th><strong>SWR</strong></th>
+                <td class="js-sort-string"><strong>Model name</strong></td>
+                <td class="js-sort-string"><strong>Size</strong></td>
+                <td class="js-sort-number"><strong>Overall (val)</strong></td>
+                <td class="js-sort-number"><strong>Overall (test)</strong></td>
+                <td class="js-sort-number"><strong>AR</strong></td>
+                <td class="js-sort-number"><strong>BVR</strong></td>
+                <td class="js-sort-number"><strong>B</strong></td>
+                <td class="js-sort-number"><strong>CR</strong></td>
+                <td class="js-sort-number"><strong>C</strong></td>
+                <td class="js-sort-number"><strong>DD</strong></td>
+                <td class="js-sort-number"><strong>IQG</strong></td>
+                <td class="js-sort-number"><strong>MR</strong></td>
+                <td class="js-sort-number"><strong>M</strong></td>
+                <td class="js-sort-number"><strong>NT</strong></td>
+                <td class="js-sort-number"><strong>OR-A</strong></td>
+                <td class="js-sort-number"><strong>OR-HN</strong></td>
+                <td class="js-sort-number"><strong>OR-P</strong></td>
+                <td class="js-sort-number"><strong>OR-T</strong></td>
+                <td class="js-sort-number"><strong>SG</strong></td>
+                <td class="js-sort-number"><strong>SAR</strong></td>
+                <td class="js-sort-number"><strong>SIR</strong></td>
+                <td class="js-sort-number"><strong>SWR</strong></td>
               </tr>
             </thead>
             <tbody>
