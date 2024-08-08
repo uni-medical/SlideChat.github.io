@@ -142,7 +142,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2408.03361" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -152,7 +152,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -160,7 +160,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -183,7 +183,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2408.03361" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -205,8 +205,12 @@
         <div class="content has-text-centered">
           <img src="static/images/cover.jpg" alt="geometric reasoning" width="100%"/>
           <p>  
-            Overview of the GMAI-MMBench. The benchmark is meticulously designed for testing LVLMs’ abilities in real-world clinical scenarios with three key features: (1) Comprehensive medical knowledge: It consists of 285 diverse clinical-related datasets from worldwide sources, covering 38 modalities. (2) Well-categorized data structure: It features 19 clinical VQA tasks and 18 clinical departments, meticulously organized into a lexical tree. (3) Multi-perceptual granularity: Interactive methods span from image to region level, offering varying degrees of perceptual details.
-          </div>
+            Overview of the GMAI-MMBench. The benchmark is meticulously designed for testing
+            LVLMs’ abilities in real-world clinical scenarios with three key features: (1) Comprehensive medical
+            knowledge: It consists of 285 diverse clinical-related datasets from worldwide sources, covering 39
+            modalities. (2) Well-categorized data structure: It features 18 clinical VQA tasks and 18 clinical
+            departments, meticulously organized into a lexical tree. (3) Multi-perceptual granularity: Interactive
+            methods span from image to region level, offering varying degrees of perceptual details.
         </p>  
     </div>
   </div>
@@ -239,12 +243,8 @@
         <div class="content has-text-centered">
           <img src="static/images/body_med.png" alt="geometric reasoning" width="100%"/>
           <p>
-            Overview of GMAI-MMBench: A benchmark for comprehensive medical knowledge
-            derived from diverse modalities, tasks, and data sources, systematically categorized in lexical tree
-            structures, and encompassing multiple perceptual granularities.
-
-          </p>  
-            
+            Examples of GMAI-MMBench. The benchmark covers a variety of clinical tasks, departments, and perceptual granularities from worldwide data sources.
+          </p>          
           </div>
     </div>
   </div>
@@ -266,7 +266,15 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            We propose GMAI-MMBench, an innovative benchmark meticulously designed for the medical field, capable of providing comprehensive evaluations of LVLMs across various aspects of healthcare. We collect 285 datasets from public sources and hospitals, covering medical imaging tasks of detection, classification, and segmentation, to form the data fuel for establishing such a benchmark. The detailed datasets are listed in the supplementary. Based on the data foundation, we design a reliable pipeline to generate question-answering pairs and organize them from different perspectives with manual validation. Finally, we carefully select approximately 26K questions with varying levels of perceptual granularity from the filtered cases to construct the final GMAI-MMBench.
+            We propose GMAI-MMBench, an innovative benchmark meticulously designed for the medical field,
+            capable of providing comprehensive evaluations of LVLMs across various aspects of healthcare.
+            We collect 285 datasets from public sources and hospitals, covering medical
+            imaging tasks of detection, classification, and segmentation, to form the data fuel for establishing such
+            a benchmark. The detailed datasets are listed in the supplementary. Based on the data foundation,
+            we design a reliable pipeline to generate question-answering pairs and organize them from different
+            perspectives with manual validation. Finally, we carefully select approximately 26K questions with
+            varying levels of perceptual granularity from the manually validated cases to construct the final
+            GMAI-MMBench.
           </p>
            <img src="static/images/Figure2.jpg" alt="algebraic reasoning" class="center">
           </p>
@@ -316,7 +324,10 @@
         </p>
         <div class="content has-text-centered">
           <img src="static/images/Lexical Tree_2.jpg" alt="algebraic reasoning" class="center">
-          <p> An example of how to use the Lexical Tree for customizing evaluations. The process involves selecting the department (ophthalmology), choosing the modality (fundus photography), filtering questions using relevant keywords, and evaluating different models based on their accuracy in answering the filtered questions. </p>
+          <p> Example of how to use the Lexical Tree for customizing evaluations for the ophthalmology
+            department and fundus photography modality. The process involves selecting the department
+            (ophthalmology), choosing the modality (fundus photography), filtering questions using relevant
+            keywords, and evaluating different models based on their accuracy in answering the filtered questions. </p>
         </div>
         </div>
     </div>
@@ -3423,7 +3434,7 @@
     <div class="content has-text-centered">
       <img src="static/images/ErrorClassification.png" alt="error distribution" width="75%">
       <p>
-        The flowchart of error classification process for evaluating model performance from input to output, encompassing stages from question understanding to knowledge analysis
+        The illustration of the entire logical process from input to output in our case study.
       </p>
     </div>
   </div>
@@ -3633,7 +3644,15 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@misc{chen2024gmaimmbenchcomprehensivemultimodalevaluation,
+        title={GMAI-MMBench: A Comprehensive Multimodal Evaluation Benchmark Towards General Medical AI}, 
+        author={Pengcheng Chen and Jin Ye and Guoan Wang and Yanjun Li and Zhongying Deng and Wei Li and Tianbin Li and Haodong Duan and Ziyan Huang and Yanzhou Su and Benyou Wang and Shaoting Zhang and Bin Fu and Jianfei Cai and Bohan Zhuang and Eric J Seibel and Junjun He and Yu Qiao},
+        year={2024},
+        eprint={2408.03361},
+        archivePrefix={arXiv},
+        primaryClass={eess.IV},
+        url={https://arxiv.org/abs/2408.03361}, 
+  }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
