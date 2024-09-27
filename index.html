@@ -203,14 +203,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
         <div class="content has-text-centered">
-          <img src="static/images/cover.jpg" alt="geometric reasoning" width="100%"/>
+          <img src="static/images/cover.png" alt="geometric reasoning" width="100%"/>
           <p>  
-            Overview of the GMAI-MMBench. The benchmark is meticulously designed for testing
-            LVLMs’ abilities in real-world clinical scenarios with three key features: (1) Comprehensive medical
-            knowledge: It consists of 285 diverse clinical-related datasets from worldwide sources, covering 39
-            modalities. (2) Well-categorized data structure: It features 18 clinical VQA tasks and 18 clinical
-            departments, meticulously organized into a lexical tree. (3) Multi-perceptual granularity: Interactive
-            methods span from image to region level, offering varying degrees of perceptual details.
+            Overview of the GMAI-MMBench. The benchmark is meticulously designed for testing LVLMs' abilities in real-world clinical scenarios with three key features: (1) Comprehensive medical knowledge: It consists of 284 diverse clinical-related datasets from worldwide sources, covering 38 modalities. (2) Well-categorized data structure: It features 18 clinical VQA tasks and 18 clinical departments, meticulously organized into a lexical tree. (3) Multi-perceptual granularity: Interactive methods span from image to region level, offering varying degrees of perceptual details.
         </p>  
     </div>
   </div>
@@ -230,25 +225,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large Vision-Language Models (LVLMs) are capable of handling diverse data
-            types such as imaging, text, and physiological signals, and can be applied in various fields. In the medical field, LVLMs have a high potential to offer substantial
-            assistance for diagnosis and treatment. Before that, it is crucial to develop benchmarks to evaluate LVLMs’ effectiveness in various medical applications. Current
-            benchmarks are often built upon specific academic literature, mainly focusing on
-            a single domain, and lacking varying perceptual granularities. Thus, they face
-            specific challenges, including limited clinical relevance, incomplete evaluations,
-            and insufficient guidance for interactive LVLMs. To address these limitations, we developed the GMAI-MMBench, the most comprehensive general medical AI
-            benchmark with well-categorized data structure and multi-perceptual granularity to
-            date. It is constructed from 285 datasets across 39 medical image modalities, 18
-            clinical-related tasks, 18 departments, and 4 perceptual granularities in a Visual
-            Question Answering (VQA) format. Additionally, we implemented a lexical tree
-            structure that allows users to customize evaluation tasks, accommodating various
-            assessment needs and substantially supporting medical AI research and applications.
-            We evaluated 50 LVLMs, and the results show that even the advanced GPT-4o
-            only achieves an accuracy of 52%, indicating significant room for improvement.
-            Moreover, we identified five key insufficiencies in current cutting-edge LVLMs that
-            need to be addressed to advance the development of better medical applications.
-            We believe that GMAI-MMBench will stimulate the community to build the next
-            generation of LVLMs toward GMAI.
+            Large Vision-Language Models (LVLMs) are capable of handling diverse data types such as imaging, text, and physiological signals, and can be applied in various fields. In the medical field, LVLMs have a high potential to offer substantial assistance for diagnosis and treatment. Before that, it is crucial to develop benchmarks to evaluate LVLMs' effectiveness in various medical applications. Current benchmarks are often built upon specific academic literature, mainly focusing on a single domain, and lacking varying perceptual granularities. Thus, they face specific challenges, including limited clinical relevance, incomplete evaluations, and insufficient guidance for interactive LVLMs. To address these limitations, we developed the GMAI-MMBench, the most comprehensive general medical AI benchmark with well-categorized data structure and multi-perceptual granularity to date. It is constructed from 284 datasets across 38 medical image modalities, 18 clinical-related tasks, 18 departments, and 4 perceptual granularities in a Visual Question Answering (VQA) format. Additionally, we implemented a lexical tree structure that allows users to customize evaluation tasks, accommodating various assessment needs and substantially supporting medical AI research and applications. We evaluated 50 LVLMs, and the results show that even the advanced GPT-4o only achieves an accuracy of 52\%, indicating significant room for improvement. Moreover, we identified five key insufficiencies in current cutting-edge LVLMs that need to be addressed to advance the development of better medical applications. We believe that GMAI-MMBench will stimulate the community to build the next generation of LVLMs toward GMAI.
             </p>
         </div>
       </div>
@@ -284,15 +261,7 @@
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
           <p>
-            We propose GMAI-MMBench, an innovative benchmark meticulously designed for the medical field,
-            capable of providing comprehensive evaluations of LVLMs across various aspects of healthcare.
-            We collect 285 datasets from public sources and hospitals, covering medical
-            imaging tasks of detection, classification, and segmentation, to form the data fuel for establishing such
-            a benchmark. The detailed datasets are listed in the supplementary. Based on the data foundation,
-            we design a reliable pipeline to generate question-answering pairs and organize them from different
-            perspectives with manual validation. Finally, we carefully select approximately 26K questions with
-            varying levels of perceptual granularity from the manually validated cases to construct the final
-            GMAI-MMBench.
+            We propose GMAI-MMBench, an innovative benchmark meticulously designed for the medical field, capable of providing comprehensive evaluations of LVLMs across various aspects of healthcare. (shown in the Figure\ref{fig:body_med}) We collect 284 datasets from public sources and hospitals, covering medical imaging tasks of detection, classification, and segmentation, to form the data fuel for establishing such a benchmark. The detailed datasets are listed in the supplementary. Based on the data foundation, we design a reliable pipeline to generate question-answering pairs and organize them from different perspectives with manual validation. Finally, we carefully select approximately 26K questions with varying levels of perceptual granularity from the manually validated cases to construct the final GMAI-MMBench.
           </p>
            <img src="static/images/Figure2.jpg" alt="algebraic reasoning" class="center">
           </p>
@@ -306,26 +275,34 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/Statistics1.jpg" alt="algebraic reasoning" width="95%"/>
-              <p> The three pie charts illustrate the distribution of different clinical VQA tasks, departments, and perceptual granularities. The left pie chart (A) shows the distribution of clinical VQA tasks, with Disease Diagnosis (DD) being the most prevalent at 18.6%, followed by Surgical Instrument Recognition (SIR) at 9.5%, Surgical Workflow Recognition (SWR) at 8.6%, and Anatomical Structure Recognition (ASR) at 8.4%. The middle pie chart (B) depicts the distribution of cases across various departments, where Pulmonary Medicine (PM) has the highest proportion at 16.0%, followed by Hematology (H) at 10.3%, General Surgery (GS) at 10.0%, and Laboratory Medicine and Pathology (LMP) at 11.1%. The right pie chart (C) represents the distribution of perceptual granularities, with Image Level accounting for the largest share at 57.2%, followed by Mask Level at 17.1%, and Contour Level at 11.6%. </p>
+              <img src="static/images/Statistics1.png" alt="algebraic reasoning" width="95%"/>
+              <p> 
+                Label distribution for clinical VQA tasks, departments, and perceptual granularities.
+              </p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/Statistics2.jpg" alt="arithmetic reasoning" width="40%"/>
-              <p> Statistics of the clinical VQA tasks and its sub-task abbreviations mentioned in the paper with their corresponding full names.</p>
+              <p> 
+                Statistics of the clinical VQA tasks and their sub-task abbreviations mentioned in the paper with their corresponding full terms.
+              </p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/Statistics3.jpg" alt="arithmetic reasoning" width="80%"/>
-              <p> Statistics of the departments and its sub-task abbreviations mentioned in the paper with their corresponding full names.</p>
+              <p> 
+                Statistics of the departments and their sub-task abbreviations mentioned in the paper with their corresponding full terms.
+              </p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/Statistics4.jpg" alt="arithmetic reasoning" width="80%"/>
-              <p> Statistics of the perceptual granularities. ∗ and # denote the case for single choice and multiple choice, respectively.</p>
+              <p> 
+                Statistics of the perceptual granularities. * and # denote the case for single choice and multiple choice, respectively.
+              </p>
             </div>
           </div>
         </div>
