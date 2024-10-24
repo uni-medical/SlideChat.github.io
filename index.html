@@ -373,92 +373,12 @@
               </p>
             </div>
             <p>
-              <strong>SlideInstruction</strong>&nbsp; There is a notable lack of
-              large-scale multimodal
-              pathology datasets supporting
-              the training of vision-language assistants for whole-slide image
-              understanding. To support the training of SlideChat, we develop
-              SlideInstruction, a comprehensive instruction dataset, sourced
-              from the TCGA database, comprising 4,915 whole slide image
-              (WSI)-report pairs from 4,028 patients. Figure 3 illustrates our
-              entire data curation pipeine. We initially prompt GPT-4 to refine
-              the pathology reports, clean up the noise in the report including
-              unrelated symbols, technical details of pathology department
-              procedures, specimen handling and processing information,
-              redundant administrative or legal statements, and some repeated
-              information. For the refined pathology reports, we further employ
-              GPT-4 to generate high-quality multimodal data, comprising two
-              main components: (1) WSI-Caption Data: We craft concise,
-              clinically relevant summaries for each whole slide image by
-              prompting the language model to extract key pathological findings.
-              These summaries were structured into coherent paragraphs that
-              highlighted crucial clinical details such as diagnostic results,
-              tumor characteristics, margin status, and lymph node involvement,
-              ensuring the caption dataset is both focused and informative. (2)
-              WSI Instruction-Following Data: To enhance the model’s ability to
-              follow instructions and improve its comprehension of pathology
-              images, we leveraged GPT-4 to generate tailored
-              question-and-answer pairs for each WSI report. Drawing inspiration
-              by PathChat, we structure these questions into three “broad”
-              categories—microscopy, diagnosis, and clinical
-              considerations—which represent key stages in the pathology
-              workflow, and thirteen “narrow” categories focusing on specific
-              aspects within each stage. To create a comprehensive instructional
-              dataset, we generated two open-ended and two closed-ended QA pairs
-              within each narrow category for every WSI report. Regarding the
-              train/test split, it is worth noting that the WSI-report datasets
-              from TCGA includes two types: (a) one report linked to multiple
-              WSIs, and (b) one report linked to a single WSI. For type (a),
-              where specific diagnostic details may not align perfectly with
-              each WSI, we include all WSIs in the training set to introduce
-              some “noisy data”, which can enhance model robustness. For type
-              (b), 80% of WSIs are allocated to the training set and 20% to the
-              test set. Finally, there are 4,181 WSIs for training and 734 WSIs
-              for testing. Consequently, we construct a large-scale training set
-              named SlideInstruction, comprising 4,181 WSI captions and 175,753
-              instruction-following VQA pairs across various broad and narrow
-              categories.
+              <strong>SlideInstruction</strong>&nbsp; 
+              To support the training of SlideChat, we develop SlideInstruction, a comprehensive instruction dataset, sourced from the TCGA database, comprising 4,915 whole slide image (WSI)-report pairs from 4,028 patients. For the refined pathology reports, we further employ GPT-4 to generate high-quality multimodal data, comprising two main components: (1) WSI-Caption Data. (2) WSI Instruction-Following Data: we structure these questions into three “broad” categories—microscopy, diagnosis, and clinical considerations—which represent key stages in the pathology workflow, and thirteen “narrow” categories focusing on specific aspects within each stage. Consequently, we construct a large-scale training set named SlideInstruction, comprising 4,181 WSI captions and 175,753 instruction-following VQA pairs across various broad and narrow categories.
             </p>
             <p>
               <strong>SlideBench</strong>&nbsp;
-              To systematically evaluate the performance of
-              SlideChat, We incorporate the remaining 734 WSI captions along
-              with a substantial number of closed-set VQA pairs to establish
-              evaluation benchmark. First, we construct a test set named
-              SlideBench-Caption based on the WSI-Caption data to evaluate the
-              model’s ability to generate accurate and coherent descriptions of
-              whole slide images. Secondly, we construct SlideBench-VQA (TCGA)
-              based on closed-set visual questionanswering (VQA) pairs along
-              with test WSIs, aiming to evaluate various aspects of model
-              performance. As shown in Figure 3 (B), to improve the quality of
-              the testing benchmarks, we employ four advanced large language
-              models, including GPT-4, InternLM2-Chat7B, Qwen-7B-Chat, and
-              DeepSeek-7B-Chat, to filter closed-set VQAs by predicting answers
-              based solely on the question text. Any questions for which at
-              least three of these models provided correct answers are
-              subsequently excluded. Following this automated filtering, five
-              expert pathologists are invited to review and amend the remaining
-              questions. The review process are guided by the following
-              criteria: (1) Whether the correct answer necessitates image
-              interpretation; (2) Whether the question and its corresponding
-              answer are logically and coherently structured; and (3) Whether
-              the question aligns appropriately with the designated broad and
-              narrow categories. QA pairs failing to meet these criteria are
-              excluded by the pathologists. Consequently, the SlideBench-VQA
-              (TCGA) comprises 7,827 VQAs across 13 categories, with some
-              examples illustrated in Figure 3 C. Additionally, we incorporate
-              the in-the-wild Early Breast Cancer Core-Needle Biopsy (BCNB) WSI
-              dataset, which encompasses a diverse patient population and a
-              variety of clinical task labels, to enhance the test set benchmark
-              and more comprehensively assess the model’s generalization
-              capabilities. In detail, we convert the BCNB dataset into a VQA
-              format by rephrasing the classification objectives into a specific
-              template as questions, while transforming the original multi-class
-              labels into selectable options, and integrate it into SlideBench
-              as an external subset, named SlideBench-VQA (BCNB). This dataset
-              comprises 7,247 VQA pairs from 1,058 patients, specifically
-              designed to evaluate SlideChat’s zero-shot generalization
-              capability across 7 distinct classification tasks.
+              To systematically evaluate the performance of SlideChat, We incorporate the 734 WSI captions along with a substantial number of closed-set VQA pairs to establish evaluation benchmark. To improve the quality of the testing benchmarks, we employ four advanced large language models to filter closed-set VQAs by predicting answers based solely on the question text. Five expert pathologists are invited to review and amend the remaining questions. Consequently, the SlideBench-VQA (TCGA) comprises 7,827 VQAs across 13 categories. Additionally, we incorporate the in-the-wild Early Breast Cancer Core-Needle Biopsy (BCNB) WSI dataset and integrate it into SlideBench as an external subset, named SlideBench-VQA (BCNB). This dataset comprises 7,247 VQA pairs from 1,058 patients, specifically designed to evaluate SlideChat’s zero-shot generalization capability across 7 distinct classification tasks. 
             </p>
           </div>
         </div>
