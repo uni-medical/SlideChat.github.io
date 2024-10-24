@@ -1,147 +1,178 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description"
+      content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description"
+      content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image"
+      content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SlideChat</title>
+    <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet">
 
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
 
-  <title>GMAI-MMBench</title>
-  <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </head>
+  <body>
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-</head>
-<body>
-
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div class="navbar-menu">
-      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More Research
-          </a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://github.com/OpenGVLab/SAM-Med2D/">
-              SAM-Med2D
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu"
+          aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start"
+          style="flex-grow: 1; justify-content: center;">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More Research
             </a>
-            <a class="navbar-item" href="https://github.com/uni-medical/SAM-Med3D/">
-              SAM-Med3D               
-            </a>
-            <a class="navbar-item" href="https://github.com/OpenGVLab/Multi-Modality-Arena/">
-              OmniMedVQA
-            </a>
-            <a class="navbar-item" href="https://github.com/uni-medical/GMAI-MMBench/">
-              GMAI-MMBench
-            </a>
+            <div class="navbar-dropdown">
+              <a class="navbar-item"
+                href="https://github.com/OpenGVLab/SAM-Med2D/">
+                SAM-Med2D
+              </a>
+              <a class="navbar-item"
+                href="https://github.com/uni-medical/SAM-Med3D/">
+                SAM-Med3D
+              </a>
+              <a class="navbar-item"
+                href="https://github.com/OpenGVLab/Multi-Modality-Arena/">
+                OmniMedVQA
+              </a>
+              <a class="navbar-item"
+                href="https://github.com/uni-medical/GMAI-MMBench/">
+                GMAI-MMBench
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
-  
-    </div>
-  </nav>
+    </nav>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">
-              <img src="static/images/icon.jpg" style="width:1em;vertical-align: middle" alt="Logo"/> 
-              <span class="mmmu" style="vertical-align: middle">SlideChat</span>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                <img src="static/images/icon.jpg"
+                  style="width:1em;vertical-align: middle" alt="Logo" />
+                <span class="mmmu"
+                  style="vertical-align: middle">SlideChat</span>
               </h1>
-            <h2 class="subtitle is-3 publication-subtitle">
-              A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding
-              <!-- <br> -->
-            </h2>
+              <h2 class="subtitle is-3 publication-subtitle">
+                A Large Vision-Language Assistant for Whole-Slide Pathology
+                Image Understanding
+                <!-- <br> -->
+              </h2>
             </h1>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">Ying Chen*<sup style="color:#ffac33;">1,2</sup>,</span>
-                <span class="author-block">Guoan Wang*<sup style="color:#ed4b82;">1,3</sup>,</span>
-                <span class="author-block">Yuanfeng Ji*<sup style="color:#007bff;">4</sup>,</span>
-                <span class="author-block">Yanjun Li<sup style="color:#007bff;">1,3</sup>,</span><br>
-                <span class="author-block">Jin Ye<sup style="color:#ffac33;">1,5</sup>,</span>
-                <span class="author-block">Tianbin Li<sup style="color:#ed4b82;">1</sup>,</span>
-                <span class="author-block">Bin Zhang<sup style="color:#ed4b82;">6</sup>,</span>
-                <span class="author-block">Nana Pei<sup style="color:#ffac33;">6</sup>,</span>
-                <span class="author-block">Rongshan Yu<sup style="color:#ffac33;">2</sup>,</span>
-                <span class="author-block">Yu Qiao<sup style="color:#6fbf73;">1</sup>,</span>
-                <span class="author-block">Junjun He<sup style="color:#9b51e0;">†,1</sup>,</span>
-              </div>
-          
-              <br>
-          
-              <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup style="color:#6fbf73;">1</sup>Shanghai AI Laboratory,</span>
-                <span class="author-block"><sup style="color:#ffac33;">2</sup>Xiamen University,</span>
-                <span class="author-block"><sup style="color:#ed4b82;">3</sup>East China Normal University,</span>
-                <span class="author-block"><sup style="color:#007bff;">4</sup>Stanford University,</span>
-                <span class="author-block"><sup style="color:#ffac33;">5</sup>Monash University,</span>
-                <span class="author-block"><sup style="color:#ed4b82;">6</sup>The First Affiliated Hospital of Jinan University</span>
-              </div>
-    
-              <br>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">*Core Contributors</span><br>
-                <span class="author-block">†Corresponding to:</span>
-                <span class="author-block"><a href="mailto:yfj@stanford.edu">yfj@stanford.edu</a>,</span>
-                <span class="author-block"><a href="mailto:hejunjun@pjlab.org.cn">hejunjun@pjlab.org.cn</a>,</span>
-              </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Ying Chen*<sup
+                  style="color:#ffac33;">1,2</sup>,</span>
+              <span class="author-block">Guoan Wang*<sup
+                  style="color:#ed4b82;">1,3</sup>,</span>
+              <span class="author-block">Yuanfeng Ji*<sup
+                  style="color:#007bff;">4</sup>,</span>
+              <span class="author-block">Yanjun Li<sup
+                  style="color:#007bff;">1,3</sup>,</span><br>
+              <span class="author-block">Jin Ye<sup
+                  style="color:#ffac33;">1,5</sup>,</span>
+              <span class="author-block">Tianbin Li<sup
+                  style="color:#ed4b82;">1</sup>,</span>
+              <span class="author-block">Bin Zhang<sup
+                  style="color:#ed4b82;">6</sup>,</span>
+              <span class="author-block">Nana Pei<sup
+                  style="color:#ffac33;">6</sup>,</span>
+              <span class="author-block">Rongshan Yu<sup
+                  style="color:#ffac33;">2</sup>,</span>
+              <span class="author-block">Yu Qiao<sup
+                  style="color:#6fbf73;">1</sup>,</span>
+              <span class="author-block">Junjun He<sup
+                  style="color:#9b51e0;">†,1</sup>,</span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2410.11761v1" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+            <br>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup
+                  style="color:#6fbf73;">1</sup>Shanghai AI Laboratory,</span>
+              <span class="author-block"><sup
+                  style="color:#ffac33;">2</sup>Xiamen University,</span>
+              <span class="author-block"><sup style="color:#ed4b82;">3</sup>East
+                China Normal University,</span>
+              <span class="author-block"><sup
+                  style="color:#007bff;">4</sup>Stanford University,</span>
+              <span class="author-block"><sup
+                  style="color:#ffac33;">5</sup>Monash University,</span>
+              <span class="author-block"><sup style="color:#ed4b82;">6</sup>The
+                First Affiliated Hospital of Jinan University</span>
+            </div>
+
+            <br>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">*Core Contributors</span><br>
+              <span class="author-block">†Corresponding to:</span>
+              <span class="author-block"><a
+                  href="mailto:yfj@stanford.edu">yfj@stanford.edu</a>,</span>
+              <span class="author-block"><a
+                  href="mailto:hejunjun@pjlab.org.cn">hejunjun@pjlab.org.cn</a>,</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2410.11761v1" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!-- <span class="link-block">
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -151,9 +182,9 @@
                     </a>
                   </span> -->
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="" target="_blank"
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -164,77 +195,112 @@
 
                 <!-- HF abstract Link -->
                 <span class="link-block">
-                  <a href="" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span>🤗Hugging Face(coming soon)</span>
-                </a>
-              </span>
+                  <a href target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span>🤗Hugging Face(coming soon)</span>
+                  </a>
+                </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2410.11761v1" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-        <div class="content has-text-centered">
-          <img src="static/images/cover.png" alt="geometric reasoning" width="100%"/>
-          <p>  
-            SlideChat is the first large vision-language assistant specifically designed for whole-slide pathology analysis. SlideChat can generates comprehensive descriptions of whole-slide images and provides contextually relevant responses across various applications.
-        </p>  
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container" style="margin-bottom: 2vh;">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">🔔News</h2>
-        <div class="content has-text-justified">
-          <p>
-            <b>🚀[2024-10-24]: We realease our paper!🌟</b>
-          </p>
-      </div>  
-      <h2 class="title is-3">Key contributions</h2>
-      <div class="content has-text-justified">
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="content has-text-centered">
+        <img src="static/images/cover.png" alt="geometric reasoning"
+          width="100%" />
         <p>
-          <ul>
-            <li>We create SlideInstruction, a largest comprehensive WSI instruction-following dataset containing 4.2K WSI-caption pairs and 176K VQA pairs.</li>
-            <li>We develop SlideChat, the first vision-language assistant capable of understanding gigapixel whole-slide images, achieving state-of-the-art performance on multiple benchmarks.</li>
-            <li>We establish SlideBench, a WSIs multi-modal benchmark comprising SlideBench-Caption, SlideBench-VQA (TCGA), and SlideBench-VQA (BCNB), covering 21 different clinical tasks.</li>
-            <li>We will release SlideChat, SlideInstruction and SlideBench as open-source resources to facilitate research and development in computational pathology.</li>
-        </ul>
-          </p>
-      </div>    
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Despite the progress made by multimodal large language models (MLLMs) in computational pathology, they remain limited by a predominant focus on patchlevel analysis, missing essential contextual information at the whole-slide level. The lack of large-scale instruction datasets and the gigapixel scale of whole slide images (WSIs) pose significant developmental challenges. In this paper, we present SlideChat, the first vision-language assistant capable of understanding gigapixel whole-slide images, exhibiting excellent multimodal conversational capability and response complex instruction across diverse pathology scenarios. To support its development, we created SlideInstruction, the largest instructionfollowing dataset for WSIs consisting of 4.2K WSI captions and 176K VQA pairs with multiple categories. Furthermore, we propose SlideBench, a multimodal
-            benchmark that incorporates captioning and VQA tasks to assess SlideChat’s capabilities in varied clinical settings such as microscopy, diagnosis. Compared to both general and specialized MLLMs, SlideChat exhibits exceptional capabilities, achieving state-of-the-art performance on 18 of 22 tasks. For example, it achieved an overall accuracy of 81.17% on SlideBench-VQA (TCGA), and 54.15% on SlideBench-VQA (BCNB). We will fully release SlideChat, SlideInstruction and SlideBench as open-source resources to facilitate research and development in computational pathology.
-            </p>
-        </div>
+          SlideChat is the first large vision-language assistant specifically
+          designed for whole-slide pathology analysis. SlideChat can generates
+          comprehensive descriptions of whole-slide images and provides
+          contextually relevant responses across various applications.
+        </p>
       </div>
     </div>
-    <!--/ Abstract. -->
-</div>
-</section>
-<!-- <section class="hero teaser">
+  </section>
+
+  <section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">🔔News</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>🚀[2024-10-24]: We realease our paper!🌟</b>
+            </p>
+          </div>
+          <h2 class="title is-3">Key contributions</h2>
+          <div class="content has-text-justified">
+            <p>
+              <ul>
+                <li>We create SlideInstruction, a largest comprehensive WSI
+                  instruction-following dataset containing 4.2K WSI-caption
+                  pairs and 176K VQA pairs.</li>
+                <li>We develop SlideChat, the first vision-language assistant
+                  capable of understanding gigapixel whole-slide images,
+                  achieving state-of-the-art performance on multiple
+                  benchmarks.</li>
+                <li>We establish SlideBench, a WSIs multi-modal benchmark
+                  comprising SlideBench-Caption, SlideBench-VQA (TCGA), and
+                  SlideBench-VQA (BCNB), covering 21 different clinical
+                  tasks.</li>
+                <li>We will release SlideChat, SlideInstruction and SlideBench
+                  as open-source resources to facilitate research and
+                  development in computational pathology.</li>
+              </ul>
+            </p>
+          </div>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Despite the progress made by multimodal large language models
+              (MLLMs) in computational pathology, they remain limited by a
+              predominant focus on patchlevel analysis, missing essential
+              contextual information at the whole-slide level. The lack of
+              large-scale instruction datasets and the gigapixel scale of whole
+              slide images (WSIs) pose significant developmental challenges. In
+              this paper, we present SlideChat, the first vision-language
+              assistant capable of understanding gigapixel whole-slide images,
+              exhibiting excellent multimodal conversational capability and
+              response complex instruction across diverse pathology scenarios.
+              To support its development, we created SlideInstruction, the
+              largest instructionfollowing dataset for WSIs consisting of 4.2K
+              WSI captions and 176K VQA pairs with multiple categories.
+              Furthermore, we propose SlideBench, a multimodal
+              benchmark that incorporates captioning and VQA tasks to assess
+              SlideChat’s capabilities in varied clinical settings such as
+              microscopy, diagnosis. Compared to both general and specialized
+              MLLMs, SlideChat exhibits exceptional capabilities, achieving
+              state-of-the-art performance on 18 of 22 tasks. For example, it
+              achieved an overall accuracy of 81.17% on SlideBench-VQA (TCGA),
+              and 54.15% on SlideBench-VQA (BCNB). We will fully release
+              SlideChat, SlideInstruction and SlideBench as open-source
+              resources to facilitate research and development in computational
+              pathology.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+  <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
         <div class="content has-text-centered">
           <img src="static/images/body_med.png" alt="geometric reasoning" width="100%"/>
@@ -245,47 +311,158 @@
     </div>
   </div>
 </section> -->
-<!-- DATASET SECTION -->
-<section class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-  <h1 class="title is-1 mmmu">
-    <img src="static/images/icon.jpg" style="width:1em;vertical-align: middle" alt="Logo"/>
-    <span class="mmmu" style="vertical-align: middle">SlideChat</span>
-  </h1>
-  </div>
-</section>
+  <!-- DATASET SECTION -->
+  <section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1 mmmu">
+        <img src="static/images/icon.jpg"
+          style="width:1em;vertical-align: middle" alt="Logo" />
+        <span class="mmmu" style="vertical-align: middle">SlideChat</span>
+      </h1>
+    </div>
+  </section>
 
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Model Architecture and Training</h2>
-        <div class="content has-text-justified">
-          <img src="static/images/model.png" alt="algebraic reasoning" class="center">
-          <p>
-            SlideChat serializes each input WSI into a sequence of 224×224 patches, converting each into visual embeddings with a patch-level encoder. A slide-level encoder then interacts with these features to generate contextual embeddings. Then, a multimodal projector maps the visual features from the slide-level encoder into a unified space, aligned seamlessly with the LLM. SlideChat was trained for two stages: Cross-Domain Alignment and Visual Instruction Learning.
-          </p>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Model Architecture and Training</h2>
+          <div class="content has-text-justified">
+            <p>
+              SlideChat serializes each input WSI into a sequence of 224×224
+              patches, converting each into visual embeddings with a patch-level
+              encoder. A slide-level encoder then interacts with these features
+              to generate contextual embeddings. Then, a multimodal projector
+              maps the visual features from the slide-level encoder into a
+              unified space, aligned seamlessly with the LLM. SlideChat was
+              trained for two stages: Cross-Domain Alignment and Visual
+              Instruction Learning.
+            </p>
+            <img src="static/images/model.png" alt="algebraic reasoning"
+              class="center" style="display: block; margin: 0 auto;">
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Generating SlideInstruction and SlideBench</h2>
-        <div class="content has-text-justified">
-          <img src="static/images/generate.png" alt="algebraic reasoning" class="center">
-          <p>
-            (A) Overview of the SlideInstruction generation pipeline. We prompt GPT-4 to extract the WSI-Caption, Open-set VQA and Closed-set VQA from reports. (B) For the generated Closed-set VQA, we employ LLMs to filter low-quality QA pairs and involve pathologists for validation, resulting in the creation of SlideBench-VQA. (C) Examples of WSI caption and instruction-following scenarios in microscopy, diagnostics, and clinical applications. 
-          </p>
-          <img src="static/images/generate.png" alt="algebraic reasoning" class="center">
-          <p>
-            Examples of generated structural VQAs in pathology across Microscopy, Diagnosis, and Clinical scenarios.
-          </p>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Generating SlideInstruction and SlideBench</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/generate.png" alt="algebraic reasoning"
+              style="display: block; margin: 0 auto;"
+              class="center">
+            <p>
+              (A) Overview of the SlideInstruction generation pipeline. We
+              prompt GPT-4 to extract the WSI-Caption, Open-set VQA and
+              Closed-set VQA from reports. (B) For the generated Closed-set VQA,
+              we employ LLMs to filter low-quality QA pairs and involve
+              pathologists for validation, resulting in the creation of
+              SlideBench-VQA. (C) Examples of WSI caption and
+              instruction-following scenarios in microscopy, diagnostics, and
+              clinical applications.
+            </p>
+            <div class="content has-text-centered">
+              <img src="static/images/generate2.png" alt="algebraic reasoning"
+                style="display: block; margin: 0 auto;"
+                class="center">
+              <p>
+                Examples of generated structural VQAs in pathology across
+                Microscopy, Diagnosis, and Clinical scenarios.
+              </p>
+            </div>
+            <p>
+              <strong>SlideInstruction</strong>&nbsp; There is a notable lack of
+              large-scale multimodal
+              pathology datasets supporting
+              the training of vision-language assistants for whole-slide image
+              understanding. To support the training of SlideChat, we develop
+              SlideInstruction, a comprehensive instruction dataset, sourced
+              from the TCGA database, comprising 4,915 whole slide image
+              (WSI)-report pairs from 4,028 patients. Figure 3 illustrates our
+              entire data curation pipeine. We initially prompt GPT-4 to refine
+              the pathology reports, clean up the noise in the report including
+              unrelated symbols, technical details of pathology department
+              procedures, specimen handling and processing information,
+              redundant administrative or legal statements, and some repeated
+              information. For the refined pathology reports, we further employ
+              GPT-4 to generate high-quality multimodal data, comprising two
+              main components: (1) WSI-Caption Data: We craft concise,
+              clinically relevant summaries for each whole slide image by
+              prompting the language model to extract key pathological findings.
+              These summaries were structured into coherent paragraphs that
+              highlighted crucial clinical details such as diagnostic results,
+              tumor characteristics, margin status, and lymph node involvement,
+              ensuring the caption dataset is both focused and informative. (2)
+              WSI Instruction-Following Data: To enhance the model’s ability to
+              follow instructions and improve its comprehension of pathology
+              images, we leveraged GPT-4 to generate tailored
+              question-and-answer pairs for each WSI report. Drawing inspiration
+              by PathChat, we structure these questions into three “broad”
+              categories—microscopy, diagnosis, and clinical
+              considerations—which represent key stages in the pathology
+              workflow, and thirteen “narrow” categories focusing on specific
+              aspects within each stage. To create a comprehensive instructional
+              dataset, we generated two open-ended and two closed-ended QA pairs
+              within each narrow category for every WSI report. Regarding the
+              train/test split, it is worth noting that the WSI-report datasets
+              from TCGA includes two types: (a) one report linked to multiple
+              WSIs, and (b) one report linked to a single WSI. For type (a),
+              where specific diagnostic details may not align perfectly with
+              each WSI, we include all WSIs in the training set to introduce
+              some “noisy data”, which can enhance model robustness. For type
+              (b), 80% of WSIs are allocated to the training set and 20% to the
+              test set. Finally, there are 4,181 WSIs for training and 734 WSIs
+              for testing. Consequently, we construct a large-scale training set
+              named SlideInstruction, comprising 4,181 WSI captions and 175,753
+              instruction-following VQA pairs across various broad and narrow
+              categories.
+            </p>
+            <p>
+              <strong>SlideBench</strong>&nbsp;
+              To systematically evaluate the performance of
+              SlideChat, We incorporate the remaining 734 WSI captions along
+              with a substantial number of closed-set VQA pairs to establish
+              evaluation benchmark. First, we construct a test set named
+              SlideBench-Caption based on the WSI-Caption data to evaluate the
+              model’s ability to generate accurate and coherent descriptions of
+              whole slide images. Secondly, we construct SlideBench-VQA (TCGA)
+              based on closed-set visual questionanswering (VQA) pairs along
+              with test WSIs, aiming to evaluate various aspects of model
+              performance. As shown in Figure 3 (B), to improve the quality of
+              the testing benchmarks, we employ four advanced large language
+              models, including GPT-4, InternLM2-Chat7B, Qwen-7B-Chat, and
+              DeepSeek-7B-Chat, to filter closed-set VQAs by predicting answers
+              based solely on the question text. Any questions for which at
+              least three of these models provided correct answers are
+              subsequently excluded. Following this automated filtering, five
+              expert pathologists are invited to review and amend the remaining
+              questions. The review process are guided by the following
+              criteria: (1) Whether the correct answer necessitates image
+              interpretation; (2) Whether the question and its corresponding
+              answer are logically and coherently structured; and (3) Whether
+              the question aligns appropriately with the designated broad and
+              narrow categories. QA pairs failing to meet these criteria are
+              excluded by the pathologists. Consequently, the SlideBench-VQA
+              (TCGA) comprises 7,827 VQAs across 13 categories, with some
+              examples illustrated in Figure 3 C. Additionally, we incorporate
+              the in-the-wild Early Breast Cancer Core-Needle Biopsy (BCNB) WSI
+              dataset, which encompasses a diverse patient population and a
+              variety of clinical task labels, to enhance the test set benchmark
+              and more comprehensively assess the model’s generalization
+              capabilities. In detail, we convert the BCNB dataset into a VQA
+              format by rephrasing the classification objectives into a specific
+              template as questions, while transforming the original multi-class
+              labels into selectable options, and integrate it into SlideBench
+              as an external subset, named SlideBench-VQA (BCNB). This dataset
+              comprises 7,247 VQA pairs from 1,058 patients, specifically
+              designed to evaluate SlideChat’s zero-shot generalization
+              capability across 7 distinct classification tasks.
+            </p>
+          </div>
         </div>
-    </div>
-    </div>
+      </div>
 
-    <!-- <div class="columns is-centered m-6">
+      <!-- <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <h2 class="title is-3">Statistics</h2>
         <div id="results-carousel" class="carousel results-carousel">
@@ -325,7 +502,7 @@
       </div>
     </div> -->
 
-    <!-- <div class="columns is-centered has-text-centered">
+      <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Lexical Tree</h2>
         <div class="content has-text-justified">
@@ -347,40 +524,44 @@
         </div>
     </div>
     </div> -->
-  </div>
-</section>
-
-<!-- RESULTS SECTION -->
-<section class="hero is-light is-small">
-  <div class="hero-body has-text-centered">
-    <img src="static/images/icon.jpg" style="width:1em;vertical-align: middle" alt="Logo"/>
-    <h1 class="title is-1 mmmu">Results</h1>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-
-<!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
-    <div class="columns is-centered m-6">
-        <div class="content"  style="width: 100%">
-          <img src="static/images/result1.png" alt="algebraic reasoning" class="center">
-          <img src="static/images/result2.png" alt="algebraic reasoning" class="center">
-          <img src="static/images/result3.png" alt="algebraic reasoning" class="center">
-      </div>
     </div>
+  </section>
 
-<!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
-<div class="columns is-centered m-6">
-  <div class="column is-full has-text-centered content">
-    <h2 class="title is-3">Demonstration of SlideChat’s Capability</h2>
-    <img src="static/images/capability1.png" alt="algebraic reasoning" class="center">
-    <img src="static/images/capability2.png" alt="algebraic reasoning" class="center">
-  </div>
-</div>
+  <!-- RESULTS SECTION -->
+  <section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1 mmmu">Results</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
 
-<!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
+      <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <img src="static/images/result1.png" alt="algebraic reasoning"
+            class="center">
+          <img src="static/images/result2.png" alt="algebraic reasoning"
+            class="center">
+          <img src="static/images/result3.png" alt="algebraic reasoning"
+            class="center">
+        </div>
+      </div>
 
-<!-- <div class="columns is-centered m-6">
+      <!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3">Demonstration of SlideChat’s Capability</h2>
+          <img src="static/images/capability1.png" alt="algebraic reasoning"
+            class="center">
+          <img src="static/images/capability2.png" alt="algebraic reasoning"
+            class="center">
+        </div>
+      </div>
+
+      <!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
+
+      <!-- <div class="columns is-centered m-6">
   <div class="column is-full has-text-centered content">
     <h2 class="title is-3" id="examples">Error Examples</h2>
     <div id="results-carousel" class="carousel results-carousel">
@@ -477,9 +658,9 @@
     </div>
   </div>
 </div> -->
-<!-------------------------------------------------------------------- Correct Example -------------------------------------------------------------------->
+      <!-------------------------------------------------------------------- Correct Example -------------------------------------------------------------------->
 
-<!-- <div class="columns is-centered m-6">
+      <!-- <div class="columns is-centered m-6">
   <div class="column is-full has-text-centered content">
     <h2 class="title is-3">Correct Examples</h2>
     <div id="results-carousel" class="carousel results-carousel">
@@ -577,38 +758,40 @@
   </div>
 </div> -->
 
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@article{chen2024slidechat,
+      <!--BibTex citation -->
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>@article{chen2024slidechat,
         title={SlideChat: A Large Vision-Language Assistant for Whole-Slide Pathology Image Understanding},
         author={Chen, Ying and Wang, Guoan and Ji, Yuanfeng and Li, Yanjun and Ye, Jin and Li, Tianbin and Zhang, Bin and Pei, Nana and Yu, Rongshan and Qiao, Yu and Junjun He},
         journal={arXiv preprint arXiv:2410.11761},
         year={2024}
       } 
   }</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+        </div>
+      </section>
+      <!--End BibTex citation -->
 
+      <footer class="footer">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is website adapted from <a
+                  href="https://nerfies.github.io/">Nerfies</a> and <a
+                  href="https://mathvista.github.io/">MathVista</a> and <a
+                  href="https://mmmu-benchmark.github.io/">MMMU</a>, licensed
+                under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-<footer class="footer">
-  <div class="columns is-centered">
-    <div class="column is-8">
-      <div class="content">
-        <p>
-          This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a> and <a href="https://mmmu-benchmark.github.io/">MMMU</a>, licensed under a <a rel="license"
-                                              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-          Commons Attribution-ShareAlike 4.0 International License</a>.
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
+      <script>
 function changeButtonText() {
   var button = document.getElementById('toggleButton');
   var table1 = document.getElementById('table1');
@@ -1996,7 +2179,7 @@ function changeButtonText() {
 });
 
 </script>
-<style>
+      <style>
   .hidden {
       display: none;
   }
@@ -2050,7 +2233,7 @@ function changeButtonText() {
   td:hover {background-color: #ffffff;}
 </style>
 
-    <!-- End of Statcounter Code -->
+      <!-- End of Statcounter Code -->
 
-  </body>
+    </body>
   </html>
