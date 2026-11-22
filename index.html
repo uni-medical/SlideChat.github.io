@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SlideChat is a multimodal AI assistant for whole-slide computational pathology.">
+    <meta name="description" content="SlideChat: A Multimodal AI Assistant for Whole-Slide Computational Pathology.">
     <meta name="keywords" content="SlideChat, computational pathology, whole-slide image, vision-language model, multimodal AI">
     <meta property="og:title" content="SlideChat">
-    <meta property="og:description" content="A multimodal AI assistant for whole-slide computational pathology.">
+    <meta property="og:description" content="A Multimodal AI Assistant for Whole-Slide Computational Pathology.">
     <meta property="og:image" content="method.png">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SlideChat">
-    <meta name="twitter:description" content="A multimodal AI assistant for whole-slide computational pathology.">
+    <meta name="twitter:description" content="A Multimodal AI Assistant for Whole-Slide Computational Pathology.">
     <meta name="twitter:image" content="method.png">
     <title>SlideChat | Whole-Slide Computational Pathology</title>
     <link rel="icon" type="image/jpeg" href="static/images/icon.jpg">
@@ -22,91 +22,131 @@
     <script defer src="static/js/fontawesome.all.min.js"></script>
   </head>
   <body>
-    <nav class="navbar site-nav" role="navigation" aria-label="main navigation">
-      <div class="container is-max-desktop nav-wrap">
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="main-container nav-inner">
         <a class="nav-brand" href="#top" aria-label="SlideChat home"><img src="static/images/icon.jpg" alt="SlideChat logo"><span>SlideChat</span></a>
-        <div class="nav-links" aria-label="Page sections">
-          <a href="#overview">Overview</a><a href="#method">Method</a><a href="#data">Data</a><a href="#examples">Examples</a><a href="#cite">Cite</a>
+        <div class="nav-links">
+          <a href="#overview">Overview</a>
+          <a href="#method">Method</a>
+          <a href="#data">Data</a>
+          <a href="#examples">Examples</a>
+          <a href="#cite">Cite</a>
         </div>
       </div>
     </nav>
 
     <main id="top">
-      <section class="hero hero-main">
-        <div class="hero-body">
-          <div class="container is-max-desktop has-text-centered">
-            <div class="title-lockup"><img src="static/images/icon.jpg" alt="SlideChat logo"><h1 class="title project-title">SlideChat</h1></div>
-            <p class="project-subtitle">A multimodal AI assistant for whole-slide computational pathology</p>
-            <div class="publication-links">
-              <a href="https://doi.org/10.1038/s43018-026-01220-4" target="_blank" rel="noopener" class="button is-rounded primary-link"><span class="icon"><i class="fas fa-file-alt"></i></span><span>Nature Cancer Paper</span></a>
-              <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Chen_SlideChat_A_Large_Vision-Language_Assistant_for_Whole-Slide_Pathology_Image_Understanding_CVPR_2025_paper.html" target="_blank" rel="noopener" class="button is-rounded secondary-link"><span class="icon"><i class="fas fa-file-alt"></i></span><span>CVPR 2025 Paper</span></a>
-              <a href="https://github.com/uni-medical/SlideChat" target="_blank" rel="noopener" class="button is-rounded secondary-link"><span class="icon"><i class="fab fa-github"></i></span><span>GitHub</span></a>
-            </div>
+      <section class="hero-section">
+        <div class="text-container hero-content">
+          <div class="hero-lockup"><img src="static/images/icon.jpg" alt="SlideChat logo"><h1>SlideChat</h1></div>
+          <p class="hero-subtitle">A Multimodal AI Assistant for Whole-Slide Computational Pathology</p>
+          <div class="hero-links">
+            <a href="https://doi.org/10.1038/s43018-026-01220-4" target="_blank" rel="noopener" class="button primary-button"><span class="icon"><i class="fas fa-file-alt"></i></span><span>Nature Cancer Paper</span></a>
+            <a href="https://openaccess.thecvf.com/content/CVPR2025/html/Chen_SlideChat_A_Large_Vision-Language_Assistant_for_Whole-Slide_Pathology_Image_Understanding_CVPR_2025_paper.html" target="_blank" rel="noopener" class="button secondary-button"><span class="icon"><i class="fas fa-file-alt"></i></span><span>CVPR 2025 Paper</span></a>
+            <a href="https://github.com/uni-medical/SlideChat" target="_blank" rel="noopener" class="button secondary-button"><span class="icon"><i class="fab fa-github"></i></span><span>GitHub</span></a>
           </div>
         </div>
       </section>
 
-      <section class="section content-section" id="overview">
-        <div class="container is-max-desktop reading-width">
-          <p class="section-kicker">Overview</p>
-          <div class="content lead-copy">
-            <p>Whole-slide images contain gigapixel-scale tissue context that is difficult to capture with patch-level analysis alone. SlideChat connects slide-level visual representations with language models to support pathology description, question answering, and multimodal reasoning.</p>
-            <p>The project brings together a whole-slide vision-language assistant, instruction-following data, and benchmarks for evaluating captioning and visual question answering in computational pathology.</p>
+      <section class="page-section" id="overview">
+        <div class="text-container prose-section">
+          <p class="section-label">Overview</p>
+          <div class="prose">
+            <p>Whole-slide images (WSIs) contain rich histological information at gigapixel resolution, yet conventional patch-level approaches often struggle to capture the broader tissue context essential for comprehensive pathological interpretation. <strong>SlideChat</strong> addresses this challenge by integrating fine-grained morphological features, global slide-level representations, and natural-language understanding within a unified multimodal framework.</p>
+            <p>Designed for flexible whole-slide analysis, SlideChat supports a wide range of pathology tasks, including visual question answering, pathology report generation, and multi-turn conversations. The framework is complemented by <strong>SlideInstruction</strong>, a large-scale instruction-following dataset, and <strong>SlideBench</strong>, a comprehensive benchmark for evaluating multimodal understanding across diverse cancer types and clinical scenarios.</p>
           </div>
         </div>
       </section>
 
-      <section class="section content-section" id="method">
-        <div class="container is-max-desktop reading-width">
-          <div class="section-heading"><p class="section-kicker">Method</p><h2 class="title section-title">From a whole-slide image to language-based analysis.</h2><p>SlideChat encodes local pathology regions, builds slide-level representations, and aligns them with a language model for clinical queries and question-guided interpretability.</p></div>
-          <figure class="feature-figure"><img src="method.png" alt="SlideChat architecture: whole-slide representation, clinical queries, and question-guided interpretability"><figcaption>Whole-slide visual encoding and multimodal alignment in SlideChat.</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="section content-section" id="data">
-        <div class="container is-max-desktop reading-width">
-          <div class="section-heading"><p class="section-kicker">Data</p><h2 class="title section-title">Slide-level Instruction data</h2><p>SlideInstruction supports report generation, judgement, multiple-choice questions, visual question answering, and conversation over whole-slide pathology images.</p></div>
-          <figure class="dataset-figure"><img src="Slide-level instruction dataset.png" alt="Examples from the Slide-level instruction dataset"><figcaption>Examples of slide-level pathology instructions in the SlideInstruction dataset.</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="section content-section" id="examples">
-        <div class="container is-max-desktop reading-width">
-          <div class="section-heading"><p class="section-kicker">Examples</p><h2 class="title section-title">Whole-slide pathology conversations.</h2><p>Representative SlideChat responses to questions about tissue architecture, diagnosis, and histological features.</p></div>
-          <div class="examples-grid">
-            <figure><img src="chat-a.png" alt="SlideChat example: cervical biopsy conversation"></figure>
-            <figure><img src="chat-b.png" alt="SlideChat example: liver specimen conversation"></figure>
-            <figure><img src="chat-c.png" alt="SlideChat example: pathology conversation"></figure>
-            <figure><img src="chat-d.png" alt="SlideChat example: pathology conversation"></figure>
+      <section class="page-section tinted-section" id="method">
+        <div class="main-container">
+          <header class="section-header text-container">
+            <p class="section-label">Method</p>
+            <h2>From Whole-Slide Images to Natural-Language Understanding</h2>
+          </header>
+          <div class="prose text-container method-copy">
+            <p>SlideChat integrates local histological features and global tissue context through a hierarchical vision-language architecture. Each WSI is divided into non-overlapping patches, which are processed by a <strong>patch-level vision encoder</strong> to extract fine-grained morphological representations. These representations are then aggregated by a <strong>slide-level vision encoder</strong> to capture relationships across tissue regions and model global histological context. A multimodal connector projects the resulting visual tokens into the embedding space of a pretrained large language model (LLM), enabling the model to generate context-aware responses to natural-language queries. Question-to-image attention maps further visualize the tissue regions emphasized for specific questions.</p>
+          </div>
+          <figure class="figure-container method-figure">
+            <img src="method.png" alt="SlideChat hierarchical vision-language architecture">
+            <figcaption>SlideChat integrates patch-level features, slide-level context modeling, and a large language model for whole-slide pathology analysis.</figcaption>
+          </figure>
+          <div class="prose text-container training-copy">
+            <p><strong>Training Strategy.</strong> SlideChat adopts a two-stage training strategy consisting of cross-domain alignment and visual instruction learning. In the first stage, the slide-level encoder and connector are trained on 8,583 WSI–caption pairs to align visual representations with pathology descriptions, while the patch-level encoder and LLM remain frozen. In the second stage, the slide-level encoder, connector, and LLM are further optimized using 265,650 WSI question–answer pairs, enabling diverse capabilities such as visual question answering, pathology report generation, and multi-turn conversation.</p>
           </div>
         </div>
       </section>
 
-      <section class="section content-section" id="cite">
-        <div class="container is-max-desktop reading-width">
-          <div class="section-heading cite-heading"><p class="section-kicker">Cite</p><h2 class="title section-title">Citation</h2></div>
-          <div class="citation-grid">
-            <article class="citation-card"><h3>Nature Cancer</h3><pre><code>@article{chen2026slidechat,
+      <section class="page-section" id="data">
+        <div class="main-container">
+          <header class="section-header text-container">
+            <p class="section-label">Data</p>
+            <h2>Slide-Level Instruction Dataset</h2>
+            <p class="section-subtitle">SlideInstruction</p>
+          </header>
+          <div class="prose text-container">
+            <p><strong>SlideInstruction</strong> is a large-scale multimodal instruction dataset developed to support whole-slide pathology understanding. Curated from 8,583 WSIs and their associated pathology reports, it comprises <strong>274,233 training samples</strong> spanning <strong>24 anatomical sites and 31 cancer types</strong>.</p>
+            <p>The dataset covers diverse instruction formats, including report generation, binary judgment, multiple-choice questions, short- and long-form visual question answering, and multi-turn conversations, providing comprehensive supervision for language-driven whole-slide analysis.</p>
+          </div>
+          <figure class="figure-container data-figure">
+            <img src="Slide-level instruction dataset.png" alt="Examples from the Slide-level instruction dataset">
+            <figcaption>Examples of report generation, judgment, multiple-choice questions, visual question answering, and multi-turn conversation in SlideInstruction.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="page-section tinted-section" id="examples">
+        <div class="main-container">
+          <header class="section-header text-container">
+            <p class="section-label">Examples</p>
+            <h2>Whole-Slide Pathology Conversations</h2>
+          </header>
+          <div class="prose text-container examples-copy">
+            <p>SlideChat enables natural-language interactions across diverse pathological scenarios, from morphological description and tissue architecture analysis to diagnostic interpretation and clinical reasoning. The following examples illustrate how SlideChat processes whole-slide visual information and generates context-aware responses to pathology-related questions.</p>
+          </div>
+          <div class="examples-container" aria-label="SlideChat pathology conversation examples">
+            <img src="chat-a.png" alt="SlideChat cervical biopsy conversation example">
+            <img src="chat-b.png" alt="SlideChat liver specimen conversation example">
+            <img src="chat-c.png" alt="SlideChat pathology analysis example">
+            <img src="chat-d.png" alt="SlideChat pathology analysis example">
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section" id="cite">
+        <div class="text-container">
+          <header class="section-header citation-header">
+            <p class="section-label">Cite</p>
+            <h2>Citation</h2>
+          </header>
+          <div class="citation-list">
+            <article class="citation-item">
+              <h3>Nature Cancer</h3>
+              <pre><code>@article{chen2026slidechat,
   title={SlideChat is a multimodal generative artificial intelligence assistant for whole-slide computational pathology across cancer types},
   author={Chen, Ying and Ma, Chenglong and Li, Qiongqiong and Yan, Fang and Chen, Yirong and Li, Tianbin and Ye, Jin and Hu, Ming and Lin, Yuxiang and Li, Yanjun and others},
   journal={Nature Cancer},
   pages={1--15},
   year={2026},
   publisher={Nature Publishing Group US, New York}
-}</code></pre></article>
-            <article class="citation-card"><h3>CVPR 2025</h3><pre><code>@inproceedings{chen2025slidechat,
+}</code></pre>
+            </article>
+            <article class="citation-item">
+              <h3>CVPR 2025</h3>
+              <pre><code>@inproceedings{chen2025slidechat,
   title={Slidechat: A large vision-language assistant for whole-slide pathology image understanding},
   author={Chen, Ying and Wang, Guoan and Ji, Yuanfeng and Li, Yanjun and Ye, Jin and Li, Tianbin and Hu, Ming and Yu, Rongshan and Qiao, Yu and He, Junjun},
   booktitle={2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   pages={5134--5143},
   year={2025},
   organization={IEEE}
-}</code></pre></article>
+}</code></pre>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer site-footer"><div class="content has-text-centered"><p><strong>SlideChat</strong></p><p class="footer-note">Website adapted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page template.</p></div></footer>
+    <footer class="site-footer"><div class="main-container">SlideChat</div></footer>
   </body>
 </html>
