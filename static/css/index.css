@@ -37,7 +37,7 @@ a:hover { color: var(--accent-dark); }
 .secondary-link:hover, .secondary-link:focus { border-color: var(--accent); color: var(--accent); }
 
 .section { padding: 4.7rem 1.25rem; }
-.content-section + .content-section, .resource-section { border-top: 1px solid var(--line); }
+.content-section + .content-section { border-top: 1px solid var(--line); }
 .reading-width { max-width: 52rem !important; }
 .section-heading { max-width: 48rem; margin-bottom: 2.25rem; }
 .section-heading > p:last-child, .lead-copy { color: var(--muted); font-size: 1.05rem; }
@@ -46,7 +46,7 @@ a:hover { color: var(--accent-dark); }
 
 .feature-figure, .dataset-figure { margin: 0; }
 .feature-figure img { display: block; width: 100%; }
-.dataset-figure { max-width: 60rem; }
+.dataset-figure { max-width: 100%; }
 .dataset-figure img { display: block; width: 100%; }
 figcaption { margin-top: .75rem; color: var(--muted); font-size: .9rem; }
 
@@ -55,15 +55,11 @@ figcaption { margin-top: .75rem; color: var(--muted); font-size: .9rem; }
 .examples-grid img { display: block; width: 100%; }
 .examples-grid figcaption { font-family: 'Google Sans', sans-serif; font-size: .92rem; font-weight: 500; }
 
-.resource-section { padding-top: 3rem; padding-bottom: 3rem; }
-.resource-line { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
-.resource-line .section-kicker { margin-bottom: .3rem; }
-.resource-line .section-title { margin: 0 !important; font-size: clamp(1.45rem, 3vw, 2rem); }
-.github-link { min-height: 2.55rem; border-color: #b9c6c8; background: #fff; color: var(--ink); font-weight: 700; }
-.github-link:hover, .github-link:focus { border-color: var(--accent); color: var(--accent); }
-
 .cite-heading { margin-bottom: 1.8rem; }
-.citation-card { height: 100%; border-top: 2px solid var(--accent); }
+.citation-grid { display: block; margin: 0; }
+.citation-grid > .column { padding: 0; }
+.citation-grid > .column + .column { margin-top: 2.6rem; }
+.citation-card { border-top: 2px solid var(--accent); }
 .citation-card h3 { margin: 0; padding: .75rem 0; border-bottom: 1px solid var(--line); font-family: 'Google Sans', sans-serif; font-size: 1.08rem; font-weight: 700; }
 .citation-card pre { margin: 0; padding: 1.1rem 0 0; overflow-x: auto; background: transparent; color: #33484e; font-size: .76rem; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
 .citation-card code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
@@ -81,5 +77,4 @@ figcaption { margin-top: .75rem; color: var(--muted); font-size: .9rem; }
   .hero-main { padding-top: 3.7rem; padding-bottom: 3.4rem; }
   .section { padding-top: 3.6rem; padding-bottom: 3.6rem; }
   .examples-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .resource-line { align-items: flex-start; flex-direction: column; gap: .8rem; }
 }
