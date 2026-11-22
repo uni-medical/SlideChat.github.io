@@ -43,21 +43,19 @@ a:hover { color: var(--accent-dark); }
 .section-title { margin-bottom: .8rem !important; font-size: clamp(1.9rem, 4vw, 2.65rem); letter-spacing: -.035em; line-height: 1.2; }
 .lead-copy p + p { margin-top: 1.1rem; }
 
-.feature-figure, .dataset-figure { margin: 0; }
+.feature-figure, .dataset-figure { max-width: 40rem; margin: 0; }
 .feature-figure img { display: block; width: 100%; }
-.dataset-figure { max-width: 100%; }
 .dataset-figure img { display: block; width: 100%; }
 figcaption { margin-top: .75rem; color: var(--muted); font-size: .9rem; }
 
-.examples-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.75rem; row-gap: 2.25rem; }
+.examples-grid { display: grid; max-width: 40rem; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.25rem; row-gap: 2rem; }
 .examples-grid figure { margin: 0; }
 .examples-grid img { display: block; width: 100%; }
 .examples-grid figcaption { font-family: 'Google Sans', sans-serif; font-size: .92rem; font-weight: 500; }
 
 .cite-heading { margin-bottom: 1.8rem; }
-.citation-grid { display: block; margin: 0; }
-.citation-grid > .column { padding: 0; }
-.citation-grid > .column + .column { margin-top: 2.6rem; }
+.citation-grid { display: block !important; margin: 0; }
+.citation-grid > div + div { margin-top: 2.6rem; }
 .citation-card { border-top: 2px solid var(--accent); }
 .citation-card h3 { margin: 0; padding: .75rem 0; border-bottom: 1px solid var(--line); font-family: 'Google Sans', sans-serif; font-size: 1.08rem; font-weight: 700; }
 .citation-card pre { margin: 0; padding: 1.1rem 0 0; overflow-x: auto; background: transparent; color: #33484e; font-size: .76rem; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
